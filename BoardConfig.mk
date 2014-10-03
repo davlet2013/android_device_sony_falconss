@@ -26,7 +26,7 @@ TARGET_KERNEL_CONFIG := msm8610_build_defconfig
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 maxcpus=2 msm_rtb.filter=0x3F ehci-hcd.park=3 msm_rtb.enable=0 lpj=192598 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_BASE := 0x00008000
-BOARD_MKBOOTIMG_ARGS := --kernel zImage --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000 --dt kernel.elf.3
 TARGET_PREBUILT_KERNEL := device/sony/falconss/kernel
 
 # Audio
@@ -120,4 +120,3 @@ BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_qcwcn
 WIFI_DRIVER_MODULE_PATH := "/system/lib/modules/wlan.ko"
 WIFI_DRIVER_MODULE_NAME := "wlan"
 BOARD_WLAN_DEVICE := qcwcn
-
